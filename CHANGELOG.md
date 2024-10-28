@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.11.0 - 2024-10-29
+- 지형 지도 타입 추가
+    - `InaviMap#MapType#NormalWithHillshade`, `InaviMap#MapType#HybridWithHillshade`, `InaviMap#MapType#SatelliteWithHillshade`, 
+
 ## 0.10.2 - 2024-05-28
 
 ## 0.10.1 - 2023-12-22

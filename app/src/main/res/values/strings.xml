@@ -125,6 +125,9 @@
     <string name="inv_text_normal_map">일반 지도</string>
     <string name="inv_text_satellite_map">항공 지도</string>
     <string name="inv_text_hybrid_map">하이브리드 지도</string>
+    <string name="inv_text_normal_hillshade_map">일반 지형 지도</string>
+    <string name="inv_text_satellite_hillshade_map">항공 지형 지도</string>
+    <string name="inv_text_hybrid_hillshade_map">하이브리드 지형 지도</string>
 
     <string name="inv_name_map_custom_style">Map Custom Style</string>
     <string name="inv_description_map_custom_style">지도 커스텀 스타일</string>

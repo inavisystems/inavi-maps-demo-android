@@ -35,7 +35,7 @@ allprojects {
 ```gradle
 /* App Module build.gradle */
 dependencies {
-    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.10.2'
+    implementation 'com.inavi.mapsdk:inavi-maps-sdk:0.11.0'
 }
 ```
 

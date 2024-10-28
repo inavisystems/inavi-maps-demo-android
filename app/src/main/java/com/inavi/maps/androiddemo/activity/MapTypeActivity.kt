@@ -7,7 +7,8 @@ import android.widget.ArrayAdapter
 import com.inavi.maps.androiddemo.R
 import com.inavi.mapsdk.maps.InaviMap
 import com.inavi.mapsdk.maps.OnMapReadyCallback
-import kotlinx.android.synthetic.main.activity_map_custom_style.*
+import kotlinx.android.synthetic.main.activity_map_custom_style.spin_map_custom_style
+import kotlinx.android.synthetic.main.activity_map_custom_style.tv_map_style
 
 class MapTypeActivity : InvMapFragmentActivity(R.layout.activity_map_custom_style), OnMapReadyCallback {
 
@@ -19,6 +20,15 @@ class MapTypeActivity : InvMapFragmentActivity(R.layout.activity_map_custom_styl
     }
     private val mapTypeHybrid: String by lazy {
         getString(R.string.inv_text_hybrid_map)
+    }
+    private val mapTypeNormalHillshade: String by lazy {
+        getString(R.string.inv_text_normal_hillshade_map)
+    }
+    private val mapTypeSatelliteHillshade: String by lazy {
+        getString(R.string.inv_text_satellite_hillshade_map)
+    }
+    private val mapTypeHybridHillshade: String by lazy {
+        getString(R.string.inv_text_hybrid_hillshade_map)
     }
 
     private var inaviMap: InaviMap? = null
@@ -34,7 +44,7 @@ class MapTypeActivity : InvMapFragmentActivity(R.layout.activity_map_custom_styl
         }
 
         tv_map_style.text = getString(R.string.inv_text_map_type)
-        val types = listOf(mapTypeNormal, mapTypeSatellite, mapTypeHybrid)
+        val types = listOf(mapTypeNormal, mapTypeSatellite, mapTypeHybrid, mapTypeNormalHillshade, mapTypeSatelliteHillshade, mapTypeHybridHillshade)
         spin_map_custom_style.adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, types)
     }
 
@@ -48,6 +58,9 @@ class MapTypeActivity : InvMapFragmentActivity(R.layout.activity_map_custom_styl
             mapTypeNormal -> inaviMap?.mapType = InaviMap.MapType.Normal
             mapTypeSatellite -> inaviMap?.mapType = InaviMap.MapType.Satellite
             mapTypeHybrid -> inaviMap?.mapType = InaviMap.MapType.Hybrid
+            mapTypeNormalHillshade -> inaviMap?.mapType = InaviMap.MapType.NormalWithHillshade
+            mapTypeSatelliteHillshade -> inaviMap?.mapType = InaviMap.MapType.SatelliteWithHillshade
+            mapTypeHybridHillshade -> inaviMap?.mapType = InaviMap.MapType.HybridWithHillshade
         }
     }
 }
